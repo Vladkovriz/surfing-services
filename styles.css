@@ -1,0 +1,711 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    --container-width: 1300px;
+    --container-padding: 40px;
+    --container-side-padding: calc(container-padding * 2);
+    --breakpoint1450: 1449.98 + px;
+    --breakpoint992: 991.98 + px;
+    --breakpoint768: 767.98 + px;
+    --breakpoint480: 479.98 + px;
+
+    --white: #fff;
+    --black: #000;
+}
+
+.btn {
+    border-radius: 100px;
+    padding: 10px 22px;
+    color: white;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding));
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--container-side-padding);
+    box-sizing: border-box;
+
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.f-sb {
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.plate {
+    border-radius: 24px;
+    box-sizing: border-box;
+}
+
+.SurfingServicesPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.SurfingServicesPage .header {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 30px 50px;
+    box-sizing: border-box;
+}
+
+.SurfingServicesPage .header .homeBtn {
+    display: flex;
+    align-items: center;
+}
+
+.SurfingServicesPage .header .homeBtn img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 80px;
+}
+
+.SurfingServicesPage .header .homeBtn span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #121212;
+}
+
+.SurfingServicesPage .header nav {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    grid-gap: 42px;
+}
+
+.SurfingServicesPage .header nav a {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #121212;
+}
+
+.SurfingServicesPage .header .login {
+    background-color: black;
+}
+
+.SurfingServicesPage .mainSection {
+    width: 100%;
+    display: flex;
+    padding: 40px 20px 120px;
+}
+
+.SurfingServicesPage .mainSection .row {
+    gap: 40px;
+}
+
+.SurfingServicesPage .mainSection .column {
+    width: calc(50% - 20px);
+}
+
+.SurfingServicesPage .mainSection .banner {
+    width: 100%;
+}
+
+.SurfingServicesPage .mainSection .banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.SurfingServicesPage .mainSection .contentInfo {
+    align-items: flex-start;
+}
+
+.SurfingServicesPage .mainSection .contentInfo .tag {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 18px;
+    gap: 8px;
+
+    width: fit-content;
+    margin: 40px 0 20px 0;
+
+    background: rgba(13, 50, 239, 0.1);
+    border-radius: 4px;
+    color: #0e33f0;
+}
+
+.SurfingServicesPage .mainSection .contentInfo .title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 80px;
+
+    color: #121212;
+}
+
+.SurfingServicesPage .mainSection .contentInfo .description {
+    max-width: 500px;
+    width: 100%;
+    margin: 40px 0 60px 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 180%;
+    color: rgba(18, 18, 18, 0.5);
+}
+
+.SurfingServicesPage .mainSection .contentInfo .btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+    gap: 24px;
+
+    background: linear-gradient(91.67deg, #3857f6 0%, #0b30ef 100%);
+    border-radius: 100px;
+    color: var(--white);
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.SurfingServicesPage .mainSection .contentInfo .btn:hover {
+    background: #0b30ef;
+}
+
+.SurfingServicesPage .mainSection .slider {
+    position: relative;
+    width: 100%;
+}
+
+.SurfingServicesPage .mainSection .slider .slide {
+    width: 100%;
+}
+
+.SurfingServicesPage .mainSection .slider .slide img {
+    width: 100%;
+}
+
+.SurfingServicesPage .mainSection .slider .sliderSteper {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+    left: 60px;
+    right: 60px;
+    bottom: 40px;
+}
+
+.SurfingServicesPage .mainSection .slider .sliderSteper .step {
+    width: 100px;
+    height: 10px;
+
+    background: var(--white);
+    opacity: 0.6;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.SurfingServicesPage .mainSection .slider .sliderSteper .step.active {
+    opacity: 1;
+}
+
+.SurfingServicesPage .secondSection {
+    position: relative;
+    box-sizing: border-box;
+
+    margin-bottom: 24px;
+
+    width: 100%;
+    height: 374px !important;
+
+    background-color: rgba(14, 51, 240, 0.1);
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #b3b3b3;
+}
+
+.SurfingServicesPage .secondSection img.secondSectionBgc {
+    width: 100%;
+    height: 374px;
+
+    object-fit: cover;
+    z-index: -1;
+}
+
+.SurfingServicesPage .secondSection .textBlock {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 600px;
+    height: 100%;
+    margin: 50px 0 50px 50%;
+}
+
+.SurfingServicesPage .secondSection .textBlock .title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 87px;
+
+    color: #121212;
+}
+
+.SurfingServicesPage .secondSection .textBlock .subTitle {
+    margin: 10px 0 26px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    /* identical to box height */
+
+    color: rgba(18, 18, 18, 0.5);
+}
+
+.SurfingServicesPage .secondSection .textBlock .description {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 180%;
+    /* or 36px */
+
+    color: rgba(18, 18, 18, 0.7);
+}
+
+.SurfingServicesPage .thirdSection {
+    display: flex;
+    width: 100%;
+    height: 675px;
+    position: relative;
+
+    margin-bottom: 80px;
+
+    background: #efefef;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #b3b3b3;
+}
+
+.SurfingServicesPage .thirdSection img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.SurfingServicesPage .thirdSection .contentInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 50%;
+
+    max-width: 600px;
+
+    padding-left: 106px;
+}
+
+.SurfingServicesPage .thirdSection .contentInfo .title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 87px;
+
+    color: #121212;
+}
+
+.SurfingServicesPage .thirdSection .contentInfo .description {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 180%;
+
+    margin: 40px 0 80px;
+
+    color: rgba(18, 18, 18, 0.7);
+}
+
+.SurfingServicesPage .thirdSection .contentInfo .pickLocationBlock {
+    display: flex;
+    align-items: center;
+}
+
+.SurfingServicesPage .thirdSection .contentInfo .pickLocationBlock input {
+    height: 55px;
+    padding: 20px 28px;
+    border-radius: 28px;
+    border: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    /* identical to box height */
+
+    box-sizing: border-box;
+
+    color: #999b9d;
+}
+
+.SurfingServicesPage .thirdSection .contentInfo .pickLocationBlock .blue-arrow {
+    width: 24px;
+    height: 24px;
+    margin: 0 6px;
+}
+
+.SurfingServicesPage .thirdSection .contentInfo .pickLocationBlock .search-btn {
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 20px;
+    padding: 0;
+
+    width: 55px;
+    height: 55px;
+}
+
+.SurfingServicesPage .thirdSection .contentInfo .pickLocationBlock .search-btn img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+}
+
+.SurfingServicesPage .thirdSection .contentInfo .pickLocationBlock .search-btn:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.SurfingServicesPage .fourthSection .banner {
+    width: 100%;
+    max-width: 600px;
+}
+
+.SurfingServicesPage .fourthSection .banner img {
+    width: 100%;
+}
+
+.SurfingServicesPage .fourthSection .row {
+    gap: 40px;
+}
+
+.SurfingServicesPage .fourthSection .column {
+    width: calc(50% - 20px);
+}
+
+.SurfingServicesPage .fourthSection .content {
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    text-align: start;
+}
+
+.SurfingServicesPage .fourthSection .content .title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 87px;
+
+    color: #121212;
+}
+
+.SurfingServicesPage .fourthSection .content .typography {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+
+    margin-top: 7px;
+
+    color: #b8b9bf;
+}
+
+.SurfingServicesPage .fourthSection .content .badge {
+    width: fit-content;
+    margin: 40px 0 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 24px;
+
+    background: #acd3ec;
+    border-radius: 16px;
+
+    color: white;
+}
+
+.SurfingServicesPage .fourthSection .content .subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 55px;
+
+    margin-bottom: 6px;
+
+    color: #1d1d1d;
+}
+
+.SurfingServicesPage .fourthSection .content .description {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 180%;
+    /* or 36px */
+
+    color: rgba(18, 18, 18, 0.7);
+}
+
+.SurfingServicesPage .fifthSection .titleBlock {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    box-sizing: border-box;
+}
+
+.SurfingServicesPage .fifthSection .titleBlock .title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 87px;
+
+    color: #121212;
+}
+
+.SurfingServicesPage .fifthSection .delimiterLine {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+    background: #e7ebfd;
+    margin: 80px auto 120px;
+
+    box-sizing: border-box;
+}
+
+.SurfingServicesPage .fifthSection .delimiterLine h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 140%;
+
+    text-transform: capitalize;
+
+    color: #121212;
+}
+
+.SurfingServicesPage .fifthSection .feedbackList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 110px;
+
+    box-sizing: border-box;
+}
+
+.SurfingServicesPage .fifthSection .feedbackList .feedback {
+    max-width: 200px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 180%;
+
+    color: #101010;
+}
+
+.SurfingServicesPage .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #efefef;
+
+    margin-top: 100px;
+    padding: 80px 130px 20px;
+
+    text-transform: none;
+    box-sizing: border-box;
+}
+
+.SurfingServicesPage .footer .row:first-child .column {
+    margin: 50px 70px 0;
+}
+
+.SurfingServicesPage .footer .row:first-child .column h5.listTitle {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+
+    color: #162c40;
+
+    margin-bottom: 35px;
+}
+
+.SurfingServicesPage .footer .row:first-child .column p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 100%;
+    color: #162c40;
+    margin-bottom: 20px;
+}
+
+.SurfingServicesPage .footer .row:first-child .column:first-child{
+    margin-right: 70px;
+}
+
+.SurfingServicesPage .footer .row:first-child .column:first-child .title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    line-height: 45px;
+    color: #141414;
+    margin-bottom: 100px;
+}
+
+.SurfingServicesPage .footer .row:first-child .column:first-child p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+
+    letter-spacing: 1px;
+    color: #162c40;
+    margin-bottom: 13px;
+}
+
+.SurfingServicesPage .footer .row:last-child {
+    width: 100%;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.SurfingServicesPage .footer .row:last-child p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 180%;
+    color: #8a8a8a;
+}
+
+@media (max-width: var(--breakpoint992)) {
+    .container {
+        max-width: 970px;
+    }
+
+    .SurfingServicesPage .mainSection .column {
+        width: 100%;
+    }
+
+    .SurfingServicesPage .thirdSection .contentInfo .title {
+        white-space: nowrap;
+    }
+
+    .SurfingServicesPage .thirdSection .contentInfo .description {
+        margin: 20px 0;
+    }
+
+    .SurfingServicesPage .thirdSection .contentInfo .pickLocationBlock {
+        flex-direction: column;
+    }
+
+    .SurfingServicesPage .thirdSection .contentInfo .pickLocationBlock .blue-arrow {
+        margin: 6px 0;
+        transform: rotate(90deg);
+    }
+
+    .SurfingServicesPage .thirdSection .contentInfo .pickLocationBlock .search-btn {
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+        transform: translate(50%, 0%);
+    }
+
+    .SurfingServicesPage .fourthSection .banner {
+        max-width: 100%;
+        padding: 0 40px;
+    }
+
+    .SurfingServicesPage .fourthSection .column {
+        width: 100%;
+    }
+
+    .SurfingServicesPage .fourthSection .content {
+        max-width: 100%;
+        padding: 40px;
+    }
+
+    .SurfingServicesPage .fourthSection .feedbackList {
+        padding: 0 30px;
+    }
+
+    .SurfingServicesPage .fourthSection .feedbackList .feedback {
+        padding: 30px;
+    }
+}
+
+@media (max-width: var(--breakpoint768)) {
+    .container {
+        max-width: 740px;
+    }
+}
+
+@media (max-width: var(--breakpoint480)) {
+    .container {
+        max-width: none;
+    }
+}
